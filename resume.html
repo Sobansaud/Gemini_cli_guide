@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Resume</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #ecf0f1;
+            --text-color: #34495e;
+            --card-background: #ffffff;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="dark"] {
+            --primary-color: #ecf0f1;
+            --secondary-color: #3498db;
+            --background-color: #2c3e50;
+            --text-color: #ecf0f1;
+            --card-background: #34495e;
+            --shadow-color: rgba(0, 0, 0, 0.4);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: var(--card-background);
+            box-shadow: 0 4px 12px var(--shadow-color);
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            color: var(--primary-color);
+        }
+
+        .header p {
+            margin: 5px 0;
+            font-size: 1.1em;
+            color: var(--secondary-color);
+        }
+        
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-top: 25px;
+        }
+
+        .section h2 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        .job, .education-item {
+            margin-bottom: 20px;
+        }
+
+        .job h3, .education-item h3 {
+            margin: 0;
+            font-size: 1.4em;
+            color: var(--secondary-color);
+        }
+
+        .job p, .education-item p {
+            margin: 5px 0;
+            font-style: italic;
+        }
+
+        .job ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills-list li {
+            background-color: var(--secondary-color);
+            color: var(--card-background);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.95em;
+        }
+
+        .theme-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--card-background);
+            color: var(--text-color);
+            border: 1px solid var(--secondary-color);
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .theme-switcher:hover {
+            background-color: var(--secondary-color);
+            color: var(--card-background);
+        }
+    </style>
+</head>
+<body>
+
+    <button class="theme-switcher" id="theme-switcher">Toggle Theme</button>
+
+    <div class="container">
+        <header class="header">
+            <h1>John Doe</h1>
+            <p class="contact-info">
+                Web Developer & UI/UX Enthusiast
+            </p>
+            <p class="contact-info">
+                <a href="mailto:john.doe@example.com">john.doe@example.com</a> | 
+                <a href="#">linkedin.com/in/johndoe</a> | 
+                <a href="#">github.com/johndoe</a>
+            </p>
+        </header>
+
+        <section class="section">
+            <h2>Summary</h2>
+            <p>
+                Highly motivated and results-oriented Web Developer with over 5 years of experience in designing, developing, and managing complex e-commerce websites and internal web applications. Proficient in modern front-end technologies and dedicated to creating seamless user experiences.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Experience</h2>
+            <div class="job">
+                <h3>Senior Front-End Developer</h3>
+                <p>Tech Solutions Inc. | San Francisco, CA | 2021 - Present</p>
+                <ul>
+                    <li>Led the development of a new customer-facing dashboard using React and Redux, resulting in a 25% increase in user engagement.</li>
+                    <li>Collaborated with the UX team to redesign the main application, improving user satisfaction scores by 40%.</li>
+                    <li>Mentored junior developers and conducted code reviews to maintain high code quality.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Web Developer</h3>
+                <p>Innovate Co. | Boston, MA | 2018 - 2021</p>
+                <ul>
+                    <li>Developed and maintained responsive websites for various clients using HTML, CSS, and JavaScript (jQuery).</li>
+                    <li>Integrated third-party APIs, such as payment gateways and social media feeds.</li>
+                    <li>Optimized website performance, reducing load times by an average of 30%.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p>University of Technology | 2014 - 2018</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>SQL & NoSQL</li>
+                <li>Git & GitHub</li>
+                <li>UI/UX Design</li>
+                <li>Agile Methodologies</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        const themeSwitcher = document.getElementById('theme-switcher');
+        const doc = document.documentElement;
+
+        // Check for saved theme in localStorage
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            doc.setAttribute('data-theme', currentTheme);
+        }
+
+        themeSwitcher.addEventListener('click', () => {
+            // Get the current theme
+            const currentTheme = doc.getAttribute('data-theme');
+            
+            // Switch to the other theme
+            if (currentTheme === 'dark') {
+                doc.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                doc.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+
+</body>
+</html>
