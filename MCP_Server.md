@@ -1,4 +1,4 @@
-# Day 2: Connect GitHub MCP Server with Gemini CLI (Remote Server)
+# Part 2: Connect GitHub MCP Server with Gemini CLI (Remote Server)
 
 Learn how to securely connect the GitHub MCP Server to your Google Gemini CLI using a remote (hosted) server—no Docker required. This method is simple, quick, and designed for modern workflows.
 
@@ -43,7 +43,7 @@ nano ~/.gemini/settings.json
 ```
 
 Add the following configuration block (**do not hardcode your token directly!**):
-
+```
 {
   "mcpServers": {
     "github": {
