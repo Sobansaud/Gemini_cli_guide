@@ -32,10 +32,10 @@ If this folder/file does not exist, create it.
         "Authorization": "Bearer $GITHUB_MCP_PAT"
       }
     },
-    "context7": {
-      "command": "npx",
-      "args": ["-y", "@upstash/context7-mcp"],
-      "env": {
+     "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
         "CONTEXT7_API_KEY": "YOUR_API_KEY"
       }
     }
@@ -99,7 +99,6 @@ qwen mcp list
 ## 📝 Final settings.json Example
 
 ``` json
-{
   "mcpServers": {
     "github": {
       "httpUrl": "https://api.githubcopilot.com/mcp/",
@@ -107,15 +106,14 @@ qwen mcp list
         "Authorization": "Bearer $GITHUB_MCP_PAT"
       }
     },
-    "context7": {
-      "command": "npx",
-      "args": ["-y", "@upstash/context7-mcp"],
-      "env": {
+     "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
         "CONTEXT7_API_KEY": "YOUR_API_KEY"
       }
     }
   }
-}
 ```
 
 ------------------------------------------------------------------------
