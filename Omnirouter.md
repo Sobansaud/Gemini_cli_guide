@@ -47,19 +47,30 @@ npm install -g @anthropic-ai/claude-code
 
 ------------------------------------------------------------------------
 
-# Step 5 --- Run Claude Code
+## Step 5 — Configure Claude Code
 
-## 🪟 Windows (PowerShell)
+1. Open your **User Folder**.
+2. Go to the **.claude** folder.
+3. Open the **settings.json** file in **Visual Studio Code**.
+4. Replace the values below with your **OmniRoute API Key** and **Model Name**, then save the file.
 
-``` powershell
-$env:CLAUDE_CONFIG_DIR="$HOME\.claude-omniroute"
-$env:ANTHROPIC_BASE_URL="http://localhost:20128"
-$env:ANTHROPIC_AUTH_TOKEN="PASTE-YOUR-OMNIROUTE-KEY-HERE"
-$env:ANTHROPIC_API_KEY=""
-$env:ANTHROPIC_MODEL="PASTE-YOUR-MODEL-NAME-HERE"
+> **Note:**
+> - `ANTHROPIC_AUTH_TOKEN` = Your OmniRoute API Key
+> - `ANTHROPIC_MODEL` = Your selected model (e.g. `oc/deepseek-v4-flash-free`)
 
-claude
+```json
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "http://localhost:20128",
+    "ANTHROPIC_AUTH_TOKEN": "Your_Key",
+    "ANTHROPIC_API_KEY": "",
+    "ANTHROPIC_MODEL":"Model_name"
+  }
+}
 ```
+
+5. Save the file.
+6. Restart **Claude Code**.
 
 ------------------------------------------------------------------------
 
